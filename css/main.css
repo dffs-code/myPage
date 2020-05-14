@@ -1,20 +1,75 @@
+/* RESET DO CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
-    background-image: url('https://www.vanessametonini.com.br/imersaocss/a1/img/fundo.jpg');
-    background-size: auto 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to left, rgb(164, 222, 255), rgb(51, 145, 199));
+    font-family: 'Jost', sans-serif;
     height: 100vh;
+    font-size: 12px;
 }
 
+/* se a tela tiver pelo menos 400 pixels, vai carregar esses estilos */
+@media (min-width: 400px){
+    body{
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 600px){
+    body{
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 560px){
+    .portfolio .grid{
+        grid-template-columns: 240px 240px;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 880px){
+    .portfolio .grid{
+        grid-template-columns: repeat(3, 240px);
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1200px){
+    .portfolio .grid{
+        align-content: center;
+        grid-template-columns: 240px 240px;    
+        height: calc(100vh - 8em - 48px);
+    }
+}
+
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .menu{
     background-color: white;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+.menu a{
+    display: block;
+    padding: 10px 20px;
 }
 
 a{
+    color: rgb(64, 131, 255);
     text-decoration: none;
 }
 
 a:hover{
-    text-decoration: underline;
+    color: rgb(8, 51, 129);
 }
 
 .site-title, .site-subtitle{
@@ -22,8 +77,14 @@ a:hover{
     color: whitesmoke;
 }
 
+.site-title{
+    font-size: 4em;
+    font-family: 'Courgette', cursive;
+}
+
 .site-subtitle{
     font-style: italic;
+    font-family: 'PT Mono', monospace;
 }
 
 .menu li{
@@ -33,4 +94,32 @@ a:hover{
 .menu ul{
     display: flex;
     justify-content: space-around;
+}
+
+.portfolio{
+    height: 100vh;
+    padding: 2em;
+}
+
+.portfolio h2{
+    font-family: 'Bad Script', cursive;
+    font-size: 2em;
+    margin-bottom: 1.2em;
+}
+
+.portfolio .grid{
+    display: grid;
+    gap: 2em;
+}
+
+.portfolio figure{
+    text-align: center;
+}
+
+.img-portfolio{
+    border-radius: 2em;
+    width: 240px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
 }
