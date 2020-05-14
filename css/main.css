@@ -5,7 +5,9 @@
     box-sizing: border-box;
 }
 body{
-    background: linear-gradient(to left, rgb(164, 222, 255), rgb(51, 145, 199));
+    /*background: linear-gradient(to left, rgb(164, 222, 255), rgb(51, 145, 199));
+    */
+    background-color: #62c3e3;
     font-family: 'Jost', sans-serif;
     height: 100vh;
     font-size: 12px;
@@ -40,7 +42,7 @@ body{
 
 @media (min-width: 1200px){
     .portfolio .grid{
-        align-content: center;
+        justify-content: center;
         grid-template-columns: 240px 240px;    
         height: calc(100vh - 8em - 48px);
     }
@@ -52,23 +54,43 @@ header{
     justify-content: center;
     align-items: center;
 }
+
+.title{
+    transform: translateX(-10vh);
+    opacity: 0;
+    animation: ease-out 850ms animaTitulo forwards;
+}
+
+@keyframes animaTitulo{
+    from{
+        transform: translateX(-10vh);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+a{
+    text-decoration: none;
+}
 .menu{
     background-color: white;
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1;
 }
 .menu a{
+    color: rgb(64, 131, 255);
     display: block;
     padding: 10px 20px;
+    transition: 0.3s;
 }
 
-a{
-    color: rgb(64, 131, 255);
-    text-decoration: none;
-}
-
-a:hover{
+.menu a:hover{
     color: rgb(8, 51, 129);
 }
 
@@ -97,14 +119,17 @@ a:hover{
 }
 
 .portfolio{
-    height: 100vh;
-    padding: 2em;
+    background-color: #f0f3bd;
+}
+.contato, .portfolio{
+    min-height: 100vh;
+    padding: 5em;
 }
 
-.portfolio h2{
-    font-family: 'Bad Script', cursive;
+.contato h2, .portfolio h2{
     font-size: 2em;
     margin-bottom: 1.2em;
+    font-weight: 200;
 }
 
 .portfolio .grid{
@@ -122,4 +147,21 @@ a:hover{
     height: 180px;
     object-fit: cover;
     object-position: center;
+    transform: scale(1);
+    transition: transform 300ms;
+}
+
+.img-portfolio:hover{
+    transform: scale(1.1)
+}
+
+.contato a{
+    color: whitesmoke;
+    font-size: 5em; 
+    text-align: center;
+    transition: text-shadow 0.5s;
+}
+
+.contato a:hover{
+    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
 }
