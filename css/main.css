@@ -5,8 +5,6 @@
     box-sizing: border-box;
 }
 body{
-    /*background: linear-gradient(to left, rgb(164, 222, 255), rgb(51, 145, 199));
-    */
     background-color: #62c3e3;
     font-family: 'Jost', sans-serif;
     height: 100vh;
@@ -79,8 +77,8 @@ a{
 .menu{
     background-color: white;
     position: fixed;
-    width: 100vw;
     top: 0;
+    width: 100vw;
     z-index: 1;
 }
 .menu a{
@@ -129,7 +127,6 @@ a{
 .contato h2, .portfolio h2{
     font-size: 2em;
     margin-bottom: 1.2em;
-    font-weight: 200;
 }
 
 .portfolio .grid{
