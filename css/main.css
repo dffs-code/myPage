@@ -4,13 +4,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #62c3e3;
     font-family: 'Jost', sans-serif;
     height: 100vh;
     font-size: 12px;
 }
-
 /* se a tela tiver pelo menos 400 pixels, vai carregar esses estilos */
 @media (min-width: 400px){
     body{
@@ -36,6 +38,9 @@ body{
         grid-template-columns: repeat(3, 240px);
         justify-content: center;
     }
+    .sobre .avatar img{
+        min-width: 250px;
+    }
 }
 
 @media (min-width: 1200px){
@@ -43,6 +48,10 @@ body{
         justify-content: center;
         grid-template-columns: 240px 240px;    
         height: calc(100vh - 8em - 48px);
+    }
+    .content{
+        font-size: 25px;
+        max-width: 1200px;
     }
 }
 
@@ -115,16 +124,41 @@ a{
     display: flex;
     justify-content: space-around;
 }
+.sobre{
+    background-color: #5bc0be;
+}
+.sobre p{
+    color:#fff;
+    margin-bottom: 1em;
+    text-indent: 1em;
+}
+
+.sobre .avatar{
+    float: right;
+    margin-left: 2em;
+}
+
+.sobre .avatar img{
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    width: 150px;
+}
 
 .portfolio{
     background-color: #f0f3bd;
 }
-.contato, .portfolio{
+
+.sobre,
+.portfolio,
+.contato{
+    margin-right: auto;
+    margin-left: auto;
     min-height: 100vh;
     padding: 5em;
 }
 
-.contato h2, .portfolio h2{
+.sobre h2,
+.portfolio h2,
+.contato h2{
     font-size: 2em;
     margin-bottom: 1.2em;
 }
@@ -140,7 +174,7 @@ a{
 
 .img-portfolio{
     border-radius: 2em;
-    width: 240px;
+    width: 100%;
     height: 180px;
     object-fit: cover;
     object-position: center;
@@ -161,4 +195,8 @@ a{
 
 .contato a:hover{
     text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.icons {
+    text-align: center;
 }
