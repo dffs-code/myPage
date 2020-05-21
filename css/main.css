@@ -46,7 +46,7 @@ body{
 @media (min-width: 1200px){
     .portfolio .grid{
         justify-content: center;
-        grid-template-columns: 240px 240px 240px;
+        grid-template-columns: repeat(3, 240px);
         height: calc(100vh - 8em - 48px);
     }
     .content{
