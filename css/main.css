@@ -10,7 +10,6 @@ html{
 body{
     background-color: #62c3e3;
     font-family: 'Jost', sans-serif;
-    height: 100vh;
     font-size: 12px;
 }
 /* se a tela tiver pelo menos 400 pixels, vai carregar esses estilos */
@@ -47,7 +46,7 @@ body{
     .portfolio .grid{
         justify-content: center;
         grid-template-columns: repeat(4, 240px);
-        height: calc(100vh - 8em - 48px);
+        height: calc(50vh - 8em - 48px);
     }
     .content{
         font-size: 25px;
@@ -56,29 +55,11 @@ body{
 }
 
 header{
-    height: 100vh;
+    height: 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.title{
-    transform: translateX(-10vh);
-    opacity: 0;
-    animation: ease-out 850ms animaTitulo forwards;
-}
-
-@keyframes animaTitulo{
-    from{
-        transform: translateX(-10vh);
-        opacity: 0;
-    }
-    to{
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
 
 a{
     text-decoration: none;
@@ -101,21 +82,6 @@ a{
     color: rgb(8, 51, 129);
 }
 
-.site-title, .site-subtitle{
-    text-align: center;
-    color: whitesmoke;
-}
-
-.site-title{
-    font-size: 4em;
-    font-family: 'Courgette', cursive;
-}
-
-.site-subtitle{
-    font-style: italic;
-    font-family: 'PT Mono', monospace;
-}
-
 .menu li{
     list-style: none;
 }
@@ -124,13 +90,13 @@ a{
     display: flex;
     justify-content: space-around;
 }
+
 .sobre{
     background-color: #5bc0be;
 }
 .sobre p{
     color:#fff;
     margin-bottom: 1em;
-    text-indent: 1em;
 }
 
 .sobre .avatar{
@@ -152,7 +118,7 @@ a{
 .contato{
     margin-right: auto;
     margin-left: auto;
-    min-height: 100vh;
+    min-height: 30vh;
     padding: 5em;
 }
 
