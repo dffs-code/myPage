@@ -1,172 +1,222 @@
 /* RESET DO CSS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
-body{
-    background-color: #62c3e3;
-    font-family: 'Jost', sans-serif;
-    font-size: 12px;
+body {
+  background-color: #62c3e3;
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
 }
 /* se a tela tiver pelo menos 400 pixels, vai carregar esses estilos */
-@media (min-width: 400px){
-    body{
-        font-size: 14px;
-    }
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
 }
 
-@media (min-width: 600px){
-    body{
-        font-size: 18px;
-    }
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
 }
 
-@media (min-width: 560px){
-    .portfolio .grid{
-        grid-template-columns: repeat(2, 240px);
-        justify-content: center;
-    }
-}
-
-@media (min-width: 880px){
-    .portfolio .grid{
-        grid-template-columns: repeat(3, 240px);
-        justify-content: center;
-    }
-    .sobre .avatar img{
-        min-width: 250px;
-    }
-}
-
-@media (min-width: 1200px){
-    .portfolio .grid{
-        justify-content: center;
-        grid-template-columns: repeat(4, 240px);
-        height: calc(50vh - 8em - 48px);
-    }
-    .content{
-        font-size: 25px;
-        max-width: 1200px;
-    }
-}
-
-header{
-    height: 5vh;
-    display: flex;
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(2, 240px);
     justify-content: center;
-    align-items: center;
+  }
 }
 
-a{
-    text-decoration: none;
-}
-.menu{
-    background-color: white;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    z-index: 1;
-}
-.menu a{
-    color: rgb(64, 131, 255);
-    display: block;
-    padding: 10px 20px;
-    transition: 0.3s;
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
+  }
+  .sobre .avatar img {
+    min-width: 250px;
+  }
 }
 
-.menu a:hover{
-    color: rgb(8, 51, 129);
+@media (min-width: 1200px) {
+  .portfolio .grid {
+    justify-content: center;
+    grid-template-columns: repeat(4, 240px);
+    height: calc(50vh - 8em - 48px);
+  }
+  .content {
+    font-size: 25px;
+    max-width: 1200px;
+  }
 }
 
-.menu li{
-    list-style: none;
+header {
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu ul{
-    display: flex;
-    justify-content: space-around;
+a {
+  text-decoration: none;
+}
+.menu {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+.menu a {
+  color: rgb(64, 131, 255);
+  display: block;
+  padding: 10px 20px;
+  transition: 0.3s;
 }
 
-.sobre{
-    background-color: #5bc0be;
-}
-.sobre p{
-    color:#fff;
-    margin-bottom: 1em;
+.menu a:hover {
+  color: rgb(8, 51, 129);
 }
 
-.sobre .avatar{
-    float: right;
-    margin-left: 2em;
+.menu li {
+  list-style: none;
 }
 
-.sobre .avatar img{
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-    width: 150px;
+.menu ul {
+  display: flex;
+  justify-content: space-around;
 }
 
-.portfolio{
-    background-color: #f0f3bd;
+.sobre {
+  background-color: #5bc0be;
+}
+.sobre p {
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 2em;
+}
+
+.sobre .avatar img {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  width: 150px;
+}
+
+.xp {
+  background-color: #636464;
+}
+
+.xpcontent {
+  display: flex;
+  justify-content: center;
+  padding: 3em;
+}
+
+.xpcontent ul {
+  list-style: none;
+}
+
+.xpcontent ul li {
+    margin-bottom: 2em;
+}
+
+.xpcontent ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #fff; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  height: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.experience {
+  max-width: 50%;
+}
+
+.xp h2 {
+  color: #fff;
+}
+
+.xp p {
+  font-size: 0.8em;
+  color: #fff;
+  margin-bottom: 1em;
+  margin-top: -1em;
+}
+
+.xp img {
+  max-width: 50%;
+  height: 100%;
+  margin-left: 2em;
+}
+
+.portfolio {
+  background-color: #f0f3bd;
 }
 
 .sobre,
 .portfolio,
-.contato{
-    margin-right: auto;
-    margin-left: auto;
-    min-height: 30vh;
-    padding: 5em;
+.contato {
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 30vh;
+  padding: 5em;
 }
 
 .sobre h2,
+.xp h2,
 .portfolio h2,
-.contato h2{
-    font-size: 2em;
-    margin-bottom: 1.2em;
+.contato h2 {
+  font-size: 2em;
+  margin-bottom: 1.2em;
 }
 
-.portfolio .grid{
-    display: grid;
-    gap: 2em;
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
 }
 
-.portfolio figure{
-    text-align: center;
+.portfolio figure {
+  text-align: center;
 }
 
-.portfolio figcaption{
-    color: black;
+.portfolio figcaption {
+  color: black;
 }
 
-.img-portfolio{
-    border-radius: 2em;
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    object-position: center;
-    transform: scale(1);
-    transition: transform 300ms;
+.img-portfolio {
+  border-radius: 2em;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1);
+  transition: transform 300ms;
 }
 
-.img-portfolio:hover{
-    transform: scale(1.1)
+.img-portfolio:hover {
+  transform: scale(1.1);
 }
 
-.contato a{
-    color: whitesmoke;
-    font-size: 5em; 
-    text-align: center;
-    transition: text-shadow 0.5s;
+.contato a {
+  color: whitesmoke;
+  font-size: 5em;
+  text-align: center;
+  transition: text-shadow 0.5s;
 }
 
-.contato a:hover{
-    text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+.contato a:hover {
+  text-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .icons {
-    text-align: center;
+  text-align: center;
 }
